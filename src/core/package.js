@@ -4,10 +4,9 @@ import { getConfig } from '../utils/config.js'
 // 1. 是否支持 ts
 // 2. 是否使用 esmodule
 export default async function initPackageJson(options) {
-  console.log('options', options)
+  console.log('options', )
   const { typescript, name, esm } = options
   const pkgJson = await getTplPkgJson()
-  console.log(typeof pkgJson, pkgJson)
 
   pkgJson['name'] = name
 
@@ -22,7 +21,6 @@ export default async function initPackageJson(options) {
       }
     }
   }
-  console.log('option after', pkgJson)
   await setPkgJson(JSON.parse(JSON.stringify(pkgJson)))
   const { npmManager } = getConfig()
   await execRun(npmManager === 'yarn' ? 'yarn' : `${npmManager} install`)
