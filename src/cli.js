@@ -9,7 +9,7 @@ const program = new Command()
 program
   .description('create a new project')
   .option('-n, --name <name>', 'name of the new project')
-  .option('-m', '--esm', true)
+  .option('-m, --esm', 'use es module', true)
   .option('-t, --typescript', 'typescript support', false)
   .option('-g, --git', 'git support', true)
   .action(async function (options) {
