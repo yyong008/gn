@@ -18,10 +18,10 @@ npx gn --name your-project
 
 
 # pnpm
-yarb exec gn -n your-project
+yarn exec gn -n your-project
 yarn exec gn --name your-project
 
 # pnpm
-npx exec gn -n your-project
-npx exec gn --name your-project
+pnpm exec gn -n your-project
+pnpm exec gn --name your-project
 ```
