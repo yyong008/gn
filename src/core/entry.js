@@ -1,13 +1,15 @@
 import { getPkgJson, setPkgJson } from '../utils/package.js'
 import fsp from 'node:fs/promises'
+import logger from '../utils/logger.js'
+
 // 1. 是否支持 ts
-// 2. 是否使用 esmodule
+// 2. 是否使用 esm
 export default async function initEntry(options) {
   const pkgJson = await getPkgJson()
 
   pkgJson['scripts']['dev'] = 'node src/index.js'
 
-  const content = `console.log('hello gn!');`
+  const content = `console.log('hello gn!')\n`
 
   await fsp.mkdir(`${process.cwd()}/src`)
   await fsp.writeFile(
@@ -16,4 +18,5 @@ export default async function initEntry(options) {
   )
 
   await setPkgJson(pkgJson)
+  logger.info('✅ scripts 入口文件配置完成')
 }

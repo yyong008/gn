@@ -1,6 +1,7 @@
 import { getTplPkgJson, setPkgJson } from '../utils/package.js'
 import { execRun } from '../utils/index.js'
 import { getConfig } from '../utils/config.js'
+import logger from '../utils/logger.js'
 
 // 1. 是否支持 ts
 // 2. 是否使用 esmodule
@@ -24,4 +25,5 @@ export default async function initPackageJson(options) {
   await setPkgJson(JSON.parse(JSON.stringify(pkgJson)))
   const { npmManager } = getConfig()
   await execRun(npmManager === 'yarn' ? 'yarn' : `${npmManager} install`)
+  logger.info('✅ package.json 生成完成')
 }

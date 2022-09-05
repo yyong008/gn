@@ -31,7 +31,7 @@ export async function checkAndInitGitRepo() {
 
     if (answer.git) {
       await execRun('git init')
-      logger.info('git init ok')
+      logger.info('\n✅ git init ok')
       hasGitInited = true
     } else {
       hasGitInited = false
