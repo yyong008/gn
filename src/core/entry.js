@@ -5,9 +5,9 @@ import fsp from 'node:fs/promises'
 export default async function initEntry(options) {
   const pkgJson = await getPkgJson()
 
-  pkgJson['scripts']['start'] = 'src/index.js'
+  pkgJson['scripts']['dev'] = 'node src/index.js'
 
-  const content = "console.log('hello gn!');"
+  const content = `console.log('hello gn!');`
 
   await fsp.mkdir(`${process.cwd()}/src`)
   await fsp.writeFile(
