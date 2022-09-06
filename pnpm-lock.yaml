@@ -13,9 +13,8 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
   husky: ^8.0.1
-  inquirer: ^9.1.0
+  inquirer: ^9.1.1
   lint-staged: ^13.0.3
-  lodash.merge: ^4.6.2
   ora: ^6.1.2
   prettier: ^2.7.1
   stylelint: ^14.10.0
@@ -24,8 +23,7 @@ specifiers:
 dependencies:
   chalk: 5.0.1
   commander: 9.4.0
-  inquirer: 9.1.0
-  lodash.merge: 4.6.2
+  inquirer: 9.1.1
   ora: 6.1.2
   typescript: 4.8.2
 
@@ -1300,9 +1298,9 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /figures/4.0.1:
-    resolution: {integrity: sha512-rElJwkA/xS04Vfg+CaZodpso7VqBknOYbzi6I76hI4X80RUjkSxO2oAyPmGbuXUppywjqndOrQDl817hDnI++w==}
-    engines: {node: '>=12'}
+  /figures/5.0.0:
+    resolution: {integrity: sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==}
+    engines: {node: '>=14'}
     dependencies:
       escape-string-regexp: 5.0.0
       is-unicode-supported: 1.2.0
@@ -1656,8 +1654,8 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
-  /inquirer/9.1.0:
-    resolution: {integrity: sha512-eukdjrBljg9t55ZnvJjvGi1OyYEzVBFsO/8o5d2MV3mc28u3x4X2kS4eJ/+9U10KiREfPkEBSeCrU/S2G/uRtw==}
+  /inquirer/9.1.1:
+    resolution: {integrity: sha512-hfS9EJ1pVkGNbYKqzdGwMj0Dqosd36Qvxd5pFy4657QT23gmtFTSqoYBisZR75DReeSMWPNa8J0Lf6TQCz8PvA==}
     engines: {node: '>=12.0.0'}
     dependencies:
       ansi-escapes: 5.0.0
@@ -1665,7 +1663,7 @@ packages:
       cli-cursor: 4.0.0
       cli-width: 4.0.0
       external-editor: 3.1.0
-      figures: 4.0.1
+      figures: 5.0.0
       lodash: 4.17.21
       mute-stream: 0.0.8
       ora: 6.1.2
@@ -1907,6 +1905,7 @@ packages:
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: true
 
   /lodash.truncate/4.4.2:
     resolution: {integrity: sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==}

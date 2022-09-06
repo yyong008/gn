@@ -8,11 +8,12 @@ export default async function initRollupConfig() {
   const pkgJson = await getPkgJson()
 
   pkgJson['scripts']['compile'] = 'rollup -c'
+  pkgJson['devDependencies']['rollup'] = '^2.79.0'
 
   await genConfigFileByName('rollup.config.js')
   await setPkgJson(pkgJson)
 
   const { npmManager } = getConfig()
   await execRun(npmManager === 'yarn' ? 'yarn' : `${npmManager} install`)
-  logger.info('✅ rollup 配置文件初始化成功')
+  logger.info('\n✅ rollup 配置文件初始化成功\n')
 }
