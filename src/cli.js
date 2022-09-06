@@ -16,4 +16,14 @@ program
     await start(options)
   })
 
+program
+  .command('create')
+  .description('create')
+  .option('--rollup', 'create a rollup config and install deps')
+  .option('-c, --component', 'create a component react vue and other')
+  .options('--webpack')
+  .action(async function (options) {
+    console.log('rollup', options)
+  })
+
 program.parse(process.argv)
