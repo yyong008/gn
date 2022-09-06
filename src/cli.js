@@ -3,6 +3,7 @@
 import { Command } from 'commander'
 
 import start from './start.js'
+import create from './create.js'
 
 const program = new Command()
 
@@ -21,9 +22,9 @@ program
   .description('create')
   .option('--rollup', 'create a rollup config and install deps')
   .option('-c, --component', 'create a component react vue and other')
-  .options('--webpack')
+  .option('--webpack', 'create a webpack config and install deps')
   .action(async function (options) {
-    console.log('rollup', options)
+    await create(options)
   })
 
 program.parse(process.argv)

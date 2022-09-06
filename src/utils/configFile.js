@@ -34,3 +34,14 @@ export async function genConfigIgnoreFileByName(filename) {
     throw new Error(e)
   })
 }
+
+export async function genConfigFileByName(filename) {
+  const content = await fsp.readFile(
+    `${__dirname}/../tpls/_${filename}`,
+    'utf-8'
+  )
+
+  await fsp.writeFile(`${process.cwd()}/${filename}`, content).catch((e) => {
+    throw new Error(e)
+  })
+}

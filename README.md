@@ -25,3 +25,15 @@ yarn exec gn --name your-project
 pnpm exec gn -n your-project
 pnpm exec gn --name your-project
 ```
+
+## create 命令
+
+``sh
+
+# pnpm
+
+pnpm exec gn create --rollup # 创建 rollup 配置文件
+
+```
+
+```
