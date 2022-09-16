@@ -23,6 +23,7 @@ program
   .option('--rollup', 'create a rollup config and install deps')
   .option('-c, --component', 'create a component react vue and other')
   .option('--webpack', 'create a webpack config and install deps')
+  .option('--nodemon', 'create a nodemon config and install deps')
   .action(async function (options) {
     await create(options)
   })
