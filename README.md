@@ -41,3 +41,18 @@ pnpm exec gn create --rollup # 创建 rollup 配置文件
 - [ ] 增加日志
 - [ ] 增加 release
 - [ ] 增加发 npm 包的流程
+- [ ] vscode 调试前端项目配置文件、rust 调试配置文件
+- [ ] 添加一个 logo 用于标识
+- [ ] 文件创建之前有一个清单 mainfest
+- [ ] 需要一个组件用于 npm/yarn/pnpm 安装提示（包含切换）
+- [ ] 增加对各种测试工具快速开始化
+
+清单：
+
+```json
+{
+  // 挂在一个 json 对象，比较大
+  "git": true,
+  "npmPackageManager": "pnpm"
+}
+```

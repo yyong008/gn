@@ -19,7 +19,11 @@
     "prepare": "husky install",
     "stylelint": "stylelint ./src/**/*.{css,less,scss,sass}",
     "stylelint:fix": "stylelint ./src/**/*.{css,less,scss,sass} --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc:dev": "astro dev",
+    "doc:start": "astro start",
+    "doc:build": "astro build",
+    "doc:preview": "astro preview"
   },
   "config": {
     "commitizen": {
@@ -27,6 +31,7 @@
     }
   },
   "dependencies": {
+    "astro": "^1.2.6",
     "chalk": "^5.0.1",
     "commander": "^9.4.0",
     "inquirer": "^9.1.1",
