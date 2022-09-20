@@ -1,0 +1,20 @@
+---
+import 'normalize.css'
+import 'github-markdown-css/github-markdown-light.css'
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <title>My Cool Astro Site</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+  </head>
+  <body>
+    <div class="flex justify-center bg-slate-300 py-8">
+      <div class='markdown-body w-3/5 px-10 py-8 rounded-sm'>
+        <slot />
+        <!-- your content is injected here -->
+      </div>
+    </div>
+  </body>
+</html>

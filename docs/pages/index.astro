@@ -1,16 +1,55 @@
 ---
+import Feature from '../components/feature'
+import Header from '../components/header'
+import Footer from '../components/footer'
+import Banner from '../components/banner'
 
+const sourceData = [
+  {
+    frames: 'Git',
+    content: '选择是否初始化 git'
+  },
+  {
+    frames: 'NPM',
+    content: '选择您(❤ ω ❤)的npm管理工具'
+  },
+  {
+    frames: '初始化入口和npm运行脚本',
+    content: '/src/index.js 和 script: node src/index.js'
+  },
+  {
+    frames: 'esm/cjs',
+    content: '不同的运行模块'
+  },
+  {
+    frames: '创建配置文件命令 create',
+    content: '初始化一些配置文件: rollup， 并安装对应包'
+  },
+  {
+    frames: '排序',
+    content: 'package.json 排序包'
+  }
+]
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div>Home</div>
-</body>
+<html lang='ch'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+    <link rel="icon" href="/favicon.svg">
+    <title>Elation Gn</title>
+  </head>
+  <body>
+    <Header />
+    <Banner />
+    <div class='flex justify-center w-full pt-2 pb-10 bix'>
+      <div class='flex flex-wrap justify-center w-3/5'>
+        {
+          sourceData.map((data) => {
+            return <Feature data={data} />
+          })
+        }
+      </div>
+    </div>
+    <Footer />
+  </body>
 </html>

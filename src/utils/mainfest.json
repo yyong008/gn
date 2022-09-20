@@ -1,0 +1,17 @@
+{
+  "git": {
+    "inited": false,
+    "gitignore": ""
+  },
+  "package": {
+    "inited": false,
+    "packageJson": "{}"
+  },
+  "npmManager": {
+    "inited": false,
+    "type": ""
+  },
+  "entry": {
+    "inited": false
+  }
+}

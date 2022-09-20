@@ -46,8 +46,8 @@ pnpm exec gn create --rollup # 创建 rollup 配置文件
 - [ ] 文件创建之前有一个清单 mainfest
 - [ ] 需要一个组件用于 npm/yarn/pnpm 安装提示（包含切换）
 - [ ] 增加对各种测试工具快速开始化
-
-清单：
+- [ ] 关联 github 地址
+      清单：
 
 ```json
 {
