@@ -6,7 +6,7 @@ import path from 'node:path'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const pkgPath = (root) => {
-  return `${root ? root : process.cwd()}/package.json`
+  return `${root ? root : process.env.PWD}/package.json`
 }
 
 /**
@@ -32,5 +32,7 @@ export async function getTplPkgJson() {
  * @param {*} pkg
  */
 export async function setPkgJson(pkgJson) {
-  await fsp.writeFile(pkgPath(), JSON.stringify(pkgJson, null, 2))
+  const _path = pkgPath()
+  await fsp.writeFile(_path, JSON.stringify(pkgJson, null, 2))
+  console.log('✅ 写入配置到 ：', _path, process.cwd())
 }

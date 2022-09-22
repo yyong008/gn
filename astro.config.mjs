@@ -10,5 +10,4 @@ export default defineConfig({
   root: './docs',
   srcDir: './docs',
   base: './docs'
-  // output: 'server'
 })

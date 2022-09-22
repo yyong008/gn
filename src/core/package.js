@@ -4,7 +4,7 @@ import { getConfig } from '../utils/config.js'
 import logger from '../utils/logger.js'
 
 // 1. 是否支持 ts
-// 2. 是否使用 esmodule
+// 2. 是否使用 es module
 export default async function initPackageJson(options) {
   const { typescript, name, esm } = options
   const pkgJson = await getTplPkgJson()

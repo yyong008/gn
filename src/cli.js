@@ -8,11 +8,11 @@ import create from './create.js'
 const program = new Command()
 
 program
-  .description('create a new project')
+  .description('create a new node.js project')
   .option('-n, --name <name>', 'name of the new project')
   .option('-m, --esm', 'use es module', true)
   .option('-t, --typescript', 'typescript support', false)
-  .option('-g, --git', 'git support', true)
+  .option('-g, --git', 'git support', false)
   .action(async function (options) {
     await start(options)
   })

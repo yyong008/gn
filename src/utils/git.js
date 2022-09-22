@@ -12,7 +12,8 @@ export async function checkIsGitInThisRepo() {
     .catch(() => false)
 }
 
-export async function checkAndInitGitRepo() {
+export async function checkAndInitGitRepo(options) {
+  if (!options.git) return
   let hasGitInited = await checkIsGitInThisRepo()
 
   if (!hasGitInited) {

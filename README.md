@@ -48,6 +48,7 @@ pnpm exec gn create --rollup # 创建 rollup 配置文件
 - [ ] 增加对各种测试工具快速开始化
 - [ ] 关联 github 地址
       清单：
+- [ ] 开发这种项目文档先行，测试先行
 
 ```json
 {

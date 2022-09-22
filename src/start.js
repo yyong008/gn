@@ -12,11 +12,11 @@ export default async function start(options) {
 
   logger.info('\n 🤞 开始创建 JavaScript 项目 🚀🚀🚀 \n')
   console.table({
-    'es module': '默认使用 esmodule',
+    'es module': '默认使用 es module',
     typescript: '默认不开启 typescript'
   })
 
-  await checkAndInitGitRepo()
+  await checkAndInitGitRepo(options)
   await genConfigIgnoreFileByName('.gitignore')
 
   await initPackageJson(options)
