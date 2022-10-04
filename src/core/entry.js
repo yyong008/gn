@@ -7,7 +7,9 @@ import logger from '../utils/logger.js'
 export default async function initEntry(options) {
   const pkgJson = await getPkgJson()
 
-  pkgJson['scripts']['dev'] = 'node src/index.js'
+  pkgJson['scripts']['dev'] = options.typescript
+    ? 'ts-node src/index.ts'
+    : 'node src/index.js'
 
   const content = `console.log('hello gn!')\n`
 
