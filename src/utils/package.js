@@ -34,5 +34,5 @@ export async function getTplPkgJson() {
 export async function setPkgJson(pkgJson) {
   const _path = pkgPath()
   await fsp.writeFile(_path, JSON.stringify(pkgJson, null, 2))
-  console.log('✅ 写入配置到 ：', _path, process.cwd())
+  console.log('✅ 写入配置到 ：', _path)
 }
