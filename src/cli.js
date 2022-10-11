@@ -14,6 +14,7 @@ program
   .option('-t, --typescript', 'typescript support', false)
   .option('-g, --git', 'git support', false)
   .option('--test', 'git test with jest', false)
+  .option('--debug-js', 'vscode debug in nodejs start npm script', false)
   .action(async function (options) {
     await start(options)
   })

@@ -7,6 +7,7 @@ import { genConfigIgnoreFileByName } from './utils/configFile.js'
 import initPackageJson from './core/package.js'
 import initEntry from './core/entry.js'
 import initTest from './core/test.js'
+import initVSCodeDebug from './core/debug-js.js'
 
 export default async function start(options) {
   await ensureNpmManager()
@@ -23,6 +24,7 @@ export default async function start(options) {
   await initPackageJson(options)
   await initEntry(options)
   await initTest(options)
+  await initVSCodeDebug(options)
 
   logger.info('\n 🌻🌻🌻 创建项目完成\n')
 }
