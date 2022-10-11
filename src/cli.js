@@ -13,6 +13,7 @@ program
   .option('-m, --esm', 'use es module', true)
   .option('-t, --typescript', 'typescript support', false)
   .option('-g, --git', 'git support', false)
+  .option('--test', 'git test with jest', false)
   .action(async function (options) {
     await start(options)
   })

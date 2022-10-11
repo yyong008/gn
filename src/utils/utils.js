@@ -6,5 +6,6 @@ export function isUndefined(v) {
 
 export  function getRunCmdStr() {
     const { npmManager } = getConfig()
+    console.log("...")
     return npmManager === 'yarn' ? 'yarn' : `${npmManager} install`
-} 
+}
